@@ -9,8 +9,10 @@ spec:
     - port: 9092
       targetPort: 9092
       protocol: TCP
+      name: kafka-9092
     - port: 2181
       targetPort: 2181
+      name: kafka-2181
   selector:
     app: kafkaApp
   type: LoadBalancer
