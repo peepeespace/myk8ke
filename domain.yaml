@@ -16,6 +16,15 @@ spec:
                 name: hw-svc
                 port:
                   number: 80
+      https:
+        paths:
+          - pathType: Prefix
+            path: /
+            backend:
+              service:
+                name: hw-svc
+                port:
+                  number: 443
     - host: www.mined.kr
       http:
         paths:
@@ -26,3 +35,12 @@ spec:
                 name: hw-svc
                 port:
                   number: 80
+      https:
+        paths:
+          - pathType: Prefix
+            path: /
+            backend:
+              service:
+                name: hw-svc
+                port:
+                  number: 443
