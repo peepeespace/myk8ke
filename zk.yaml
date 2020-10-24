@@ -23,6 +23,10 @@ apiVersion: apps/v1
 metadata:
   name: zk-deployment-1
 spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: zk-1
   template:
     metadata:
       labels:
