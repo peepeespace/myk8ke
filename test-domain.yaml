@@ -8,10 +8,11 @@ spec:
   rules:
     - host: mined.kr
       http:
-        - pathType: Prefix
-          paths: /
-          backend:
-            service:
-              name: httpbin
-              port:
-                number: 80
+        paths:
+          - pathType: Prefix
+            paths: /
+            backend:
+              service:
+                name: httpbin
+                port:
+                  number: 80
