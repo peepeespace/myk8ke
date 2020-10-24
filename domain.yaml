@@ -3,7 +3,7 @@ kind: Ingress
 metadata:
   name: mined-domain-ingress
   annotations:
-    kubernetes.io/ingress.class: nginx
+    kubernetes.io/ingress.class: "nginx"
 spec:
   rules:
     - host: mined.kr
@@ -15,7 +15,7 @@ spec:
               service:
                 name: hw-svc
                 port:
-                  number: 30604
+                  number: 8080
     - host: www.mined.kr
       http:
         paths:
@@ -25,4 +25,4 @@ spec:
               service:
                 name: hw-svc
                 port:
-                  number: 30604
+                  number: 8080
